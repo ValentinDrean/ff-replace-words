@@ -1,4 +1,10 @@
 {
+  "applications": {
+    "gecko": {
+      "id": "valentin@drean.xyz",
+      "strict_min_version": "42.0"
+    }
+  },
   "manifest_version": 2,
   "name": "Novlang Annihilator",
   "version": "1.1",
@@ -7,11 +13,11 @@
 
   "content_scripts": [
     {
-      "js": ["changeWords.js"],
+      "js": ["changeWords.js", "options/options.js"],
+      "css": ["options/options.css"],
       "matches": ["<all_urls>"]
     }
   ],
-
   "options_ui": {
     "page": "options/options.html"
   },
