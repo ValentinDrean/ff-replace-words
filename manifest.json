@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Novlang Annihilator",
+  "version": "1.1",
+
+  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+
+  "content_scripts": [
+    {
+      "js": ["changeWords.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "options/options.html"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ]
+}
