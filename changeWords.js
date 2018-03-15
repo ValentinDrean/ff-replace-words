@@ -1,12 +1,3 @@
-/*
-Default settings. Initialize storage to these values.
-*/
-// var savedString =
-// {
-//   wordIn: "wordIn",
-//   wordOut: "wordOut"
-// }
-
 if (window.addEventListener) {
   window.addEventListener("load", init, false);
 } else if (window.attachEvent) {
@@ -56,16 +47,6 @@ function onError(e)
 {
   console.error(e);
 }
-
-/*
-On startup, check whether we have stored settings.
-If we don't, then store the default settings.
-*/
-// function checkStoredSettings(storedSettings) {
-//   if (!storedSettings.savedString) {
-//     browser.storage.local.set({savedString});
-//   }
-// }
 
 const gettingStoredSettings = browser.storage.local.get();
 gettingStoredSettings.then(checkStoredSettings, onError);

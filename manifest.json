@@ -13,14 +13,20 @@
 
   "content_scripts": [
     {
-      "js": ["changeWords.js", "options/options.js"],
-      "css": ["options/options.css"],
+      "js": ["changeWords.js", "popup/options.js"],
+      "css": ["popup/options.css"],
       "matches": ["<all_urls>"]
     }
   ],
-  "options_ui": {
-    "page": "options/options.html"
-  },
+
+  "browser_action": {
+    "default_icon": {
+     "32" : "icons/chat32.png"
+    },
+    "default_title": "Novlang Annihilator",
+    "default_popup": "popup/options.html"
+},
+
   "permissions": [
     "webRequest",
     "webRequestBlocking",
