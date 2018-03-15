@@ -1,0 +1,57 @@
+/*button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {border:0;padding:0;margin:0;}*/
+
+.word-container
+{
+  display:flex;
+}
+.word-line2
+{
+  display: -webkit-flex;
+  /*display: flex;*/
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+p
+{
+  margin-left: 10px;
+}
+
+.clear
+{
+  margin-left: 10px;
+}
+
+button, input {
+  margin: 0;
+  /* padding: 0; */
+  /* border: 1px black solid; */
+  border-radius: 5px;
+  padding: 5px!important;
+  font: inherit;
+  color: inherit;
+  background: lightblue;
+}
+
+/* Firefox fix - bug 140562 */
+button::-moz-focus-inner, input {
+  /* border: 1px black solid; */
+  border-radius: 5px;
+  padding: 5px!important;
+  /* border: none; */
+}
+
+/* We're using :-moz-focusring rather than :focus so that we
+   don't change the default focus in other browsers. If you
+   set your own focus styles for buttons, you might drop the
+   :-moz-focusring part. */
+button:-moz-focusring {
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 5px!important;
+  outline: 1px dotted;
+}
